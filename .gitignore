@@ -59,3 +59,14 @@ typings/
 
 # next.js build output
 .next
+
+
+npm-debug.log
+
+.project
+.vscode
+.history
+.DS_Store
+\.settings/
+build/env.js
+dist/
