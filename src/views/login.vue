@@ -66,10 +66,10 @@ export default {
     methods: {
         handleSubmit() {
             this.$refs.loginForm.validate((valid) => {
-                console.log(this.$refs.loginForm);
-                console.log("-----------------------------")
-                console.log("valid::", valid);
-                console.log("-----------------------------")
+                // console.log(this.$refs.loginForm);
+                // console.log("-----------------------------")
+                // console.log("valid::", valid);
+                // console.log("-----------------------------")
 
                 if (valid) {
                     Utils.api('/api/searchImg', {
