@@ -76,13 +76,6 @@ export const otherRouter = {
                 import ('@/views/own-space/own-space.vue')
         },
         {
-            path: 'articleDetail',
-            title: '文章详情',
-            name: 'article_detail',
-            component: () =>
-                import ('@/views/article/articleDetail.vue')
-        },
-        {
             path: 'order/:order_id',
             title: '订单详情',
             name: 'order-info',
