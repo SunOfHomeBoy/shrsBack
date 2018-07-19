@@ -7,19 +7,17 @@
     <div class="article">
         <Row>
             <Col span="24">
-                <Card>
-                    <p slot="title">
-                        <!-- <Icon type="android-contact"></Icon> -->
-                        文章
-                    </p>
-                    <div class="article-con">
-                       <!--  <img :src="avatorPath" alt="">
-                        <p>当前用户权限值:<b>{{ accessCode }}</b></p> -->
-                        文章管理
-                    </div>
-                </Card>
+            <Card>
+                <p slot="title">
+                    <Icon type="android-contact"></Icon>
+                    选择文章列表
+                </p>
+                <div class="article-con">
+                    <Table stripe :columns="columns1" :data="data1"></Table>
+                </div>
+            </Card>
             </Col>
-           
+
         </Row>
     </div>
 </template>
@@ -28,16 +26,54 @@
 import Cookies from 'js-cookie';
 export default {
     name: 'access_index',
-    data () {
+    data() {
         return {
-           /*  accessCode: parseInt(Cookies.get('access')),
-            switchValue: parseInt(Cookies.get('access')) === 1 */
+            columns1: [
+                {
+                    title: 'Name',
+                    key: 'name'
+                },
+                {
+                    title: 'Age',
+                    key: 'age'
+                },
+                {
+                    title: 'Address',
+                    key: 'address'
+                }
+            ],
+            data1: [
+                {
+                    name: 'John Brown',
+                    age: 18,
+                    address: 'New York No. 1 Lake Park',
+                    date: '2016-10-03'
+                },
+                {
+                    name: 'Jim Green',
+                    age: 24,
+                    address: 'London No. 1 Lake Park',
+                    date: '2016-10-01'
+                },
+                {
+                    name: 'Joe Black',
+                    age: 30,
+                    address: 'Sydney No. 1 Lake Park',
+                    date: '2016-10-02'
+                },
+                {
+                    name: 'Jon Snow',
+                    age: 26,
+                    address: 'Ottawa No. 2 Lake Park',
+                    date: '2016-10-04'
+                }
+            ]
         };
     },
     computed: {
-       /*  avatorPath () {
-            return localStorage.avatorImgPath;
-        } */
+        /*  avatorPath () {
+             return localStorage.avatorImgPath;
+         } */
     },
     methods: {
         /* changeAccess (res) {
@@ -55,5 +91,4 @@ export default {
 </script>
 
 <style>
-
 </style>

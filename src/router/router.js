@@ -127,7 +127,7 @@ export const appRouter = [
                 name: 'artical-publish',
                 // icon: 'compose',
                 component: () =>
-                    import ('@/views/form/article-publish/article-publish.vue')
+                    import ('@/views/article/article-publish.vue')
             }
         ]
     },
