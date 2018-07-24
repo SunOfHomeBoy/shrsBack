@@ -3,9 +3,7 @@ import env from '../../build/env';
 import semver from 'semver';
 import packjson from '../../package.json';
 
-let util = {
-
-};
+let util = {};
 util.title = function (title, vm) {
     let iTitle = '四海日盛后台管理';
     if (title) {
@@ -268,5 +266,14 @@ util.checkUpdate = function (vm) {
         }
     });
 };
+
+util.getIndex = function (arr, objKey, key) {
+    for (let i = 0; i < arr.length; i++) {
+            if (arr[i][objKey] === key) {
+                    return i;
+            }
+    }
+    return -1;
+}
 
 export default util;

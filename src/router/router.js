@@ -1,4 +1,5 @@
 import Main from '@/views/Main.vue';
+import articles from '@/views/article/article-publish.vue';
 
 // 不作为Main组件的子页面展示的页面单独写，如下
 export const loginRouter = {
@@ -83,6 +84,12 @@ export const otherRouter = {
                 import ('@/views/advanced-router/component/order-info.vue')
         }, // 用于展示动态路由
         {
+            path: 'article/artical-modify/:artical_id',
+            title: '文章修改',
+            name: 'article-changes',
+            component: articles
+        }, // 文章动态匹配路由
+        {
             path: 'shopping',
             title: '购物详情',
             name: 'shopping',
@@ -119,8 +126,7 @@ export const appRouter = [
                 title: '文章发布',
                 name: 'artical-publish',
                 // icon: 'compose',
-                component: () =>
-                    import ('@/views/article/article-publish.vue')
+                component: articles
             }
         ]
     },
